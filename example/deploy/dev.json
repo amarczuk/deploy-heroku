@@ -1,0 +1,5 @@
+{ "myapp" : {
+		"dev": "yes"
+	},
+"NPM_CONFIG_PRODUCTION": false
+}

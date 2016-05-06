@@ -1,0 +1,43 @@
+{
+    "herokuToken" : "523336e4-d295-4b00-90f9-ff8f9767877d",
+    "build"  : {
+        "baseFolder": ".",
+        "ignoreFoldersTestRun": [ ".git", "node_modules", "deploy" ],
+        "ignoreFoldersDeploy": [ ".git", "node_modules", "deploy", "tests" ],
+        "webrootFolder": "",
+        "testCommand": "cd /app && npm test",
+        "testResults": [ "tests/results/junit.xml" ],
+        "postScripts": {}
+    },
+    "apps"  : [
+        {
+            "name": "heroku-deploy-example-dev",
+            "config": "./deploy/dev.json",
+            "processType": "free",
+            "webWorkers": {
+                "min": 0,
+                "max": 0
+            }
+        },
+        {
+            "name": "heroku-deploy-example-ci",
+            "config": "./deploy/ci.json",
+            "processType": "free",
+            "webWorkers": {
+                "min": 0,
+                "max": 0
+            }
+        },
+        {
+            "name": "heroku-deploy-example-prod",
+            "config": "./deploy/prod.json",
+            "processType": "free",
+            "organization": "myorg",
+            "webWorkers": {
+                "min": 5,
+                "max": 10
+
+            }
+        }
+    ]
+}

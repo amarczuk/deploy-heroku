@@ -1,0 +1,33 @@
+{
+  "name": "deploy-heroku",
+  "description": "Easy way to deploy app and run unit tests on Heroku platform.",
+  "version": "0.0.0",
+  "private": false,
+  "main": "lib/heroku-deploy.js",
+  "dependencies": {
+    "child-process-promise": "^2.0.1",
+    "fs-extended": "^0.2.1",
+    "fs-extra": "^0.28.0",
+    "heroku-client": "*",
+    "herokuRun": "*",
+    "nconf": "^0.8.4"
+  },
+  "devDependencies": {
+    "mocha": "x",
+    "mocha-jenkins-reporter": "x",
+    "should": "6.0.x",
+    "sinon": "v1.14.x"
+  },
+  "scripts": {
+    "test": "make -f Makefile test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amarczuk/deploy-heroku"
+  },
+  "author": "Adam Marczuk",
+  "license": "MIT",
+  "engines": {
+    "node": ">4.0.x"
+  }
+}
