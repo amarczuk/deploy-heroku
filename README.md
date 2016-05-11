@@ -5,7 +5,7 @@
 Run options:
 
 ``` bash
-$ node ./node_modules/heroku-deploy/lib/deploy.js <app> [params]
+$ node ./node_modules/heroku-deploy/lib/deploy.js <app>
 ```
 
 Require *deploy.json* to be present in app's main folder:

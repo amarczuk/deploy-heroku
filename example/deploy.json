@@ -5,9 +5,11 @@
         "ignoreFoldersTestRun": [ ".git", "node_modules", "deploy" ],
         "ignoreFoldersDeploy": [ ".git", "node_modules", "deploy", "tests" ],
         "webrootFolder": "",
-        "testCommand": "cd /app && npm test",
-        "testResults": [ "tests/results/junit.xml" ],
-        "postScripts": {}
+        "tests":{
+                "command": "cd /app && npm test",
+                "results": [ "tests/results/junit.xml" ],
+                "output": "./tests/results"
+            }
     },
     "apps"  : [
         {
@@ -15,8 +17,8 @@
             "config": "./deploy/dev.json",
             "processType": "free",
             "webWorkers": {
-                "min": 0,
-                "max": 0
+                "min": 1,
+                "max": 1
             }
         },
         {
